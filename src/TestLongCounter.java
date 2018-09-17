@@ -2,7 +2,7 @@ public class TestLongCounter {
   public static void main(String[] args) {
     final int range = 100_000_000;
     final LongCounter lc = new LongCounter();
-    final int threadCount = 1;
+    final int threadCount = 10;
     final int perThread = range / threadCount;
     Thread[] threads = new Thread[threadCount];
     for (int t=0; t<threadCount; t++) {
