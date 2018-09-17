@@ -33,6 +33,10 @@ class LongCounter {
     count = count + 1;
   }
 
+  public void decrement() {
+    count -= 1;
+  }
+
   public  long get() { 
     return count; 
   }
