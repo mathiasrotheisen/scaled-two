@@ -9,7 +9,7 @@ public class TestLongCounter {
     });
     Thread t2 = new Thread(() -> {
       for (int i=0; i<counts; i++) {
-        lc.increment();
+        lc.decrement();
       }
     });
     t1.start(); t2.start();
@@ -23,8 +23,12 @@ public class TestLongCounter {
 
 class LongCounter {
   private long count = 0;
-  public void increment() {
+  public synchronized void increment() {
       count = count + 1;
+  }
+
+  public void decrement() {
+    count -= 1;
   }
 
   public  long get() { 
