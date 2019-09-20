@@ -26,6 +26,7 @@ class LongCounter {
   public void decrement() {
       count = count - 1;
   }
+  public void minmetode() {int i = 100;}
 
   public  long get() { 
     return count; 
