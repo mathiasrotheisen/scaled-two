@@ -1,3 +1,5 @@
+DEN HER LINJE HAR MORTEN TILFØJET!
+
 # scaled-two
 Klassen TestLongCounter er en simpel klasse som opretter to tråde, som hver især tæller en counter op med 10.000.000. Det forventede resultat af denne optælling er derfor 20.000.000. 
 1. Hvilket resultat får du?
