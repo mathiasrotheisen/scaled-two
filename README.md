@@ -18,7 +18,7 @@ Udvid LongCounter klassen med en 'decrement'-metode, som trækker én fra counte
 
 2. Hvis du kun låser/synchronizer 'increment'-metoden, hvad forventer du så resultatet bliver? Hvorfor?
 
-//hvis man låser increment fås et negativt tal, fordi increment altid venter på decement, men decrement behøver ikke vente på increment
+//hvis man låser increment fås et negativt tal, fordi increment altid venter på decrement, men decrement behøver ikke vente på increment
 
 Skift branch til 'multithread', og ændr antallet af tråde til 10. Koden er lavet således at, hver tråd står for sit eget interval. Eksempelvis når der skal tælles op til 100.000.000 på 10 tråde, så kører første tråd i intervallet 0 - 10.000.000, 2. tråd på 10.000.000 - 20.000.000 osv.
 1. Før du kører klassen, hvad forventer du så, der sker med hastigheden på programmet, når flere tråde kører samtidig?
@@ -30,3 +30,9 @@ Skift branch til 'multithread', og ændr antallet af tråde til 10. Koden er lav
 3. Hvorfor får du dette resultat?
 
 //Når man incrementer en counter er det en meget simpel operation. I vores tilfælde betyder det, at det faktisk bliver mere krævende at instantiere 10 tråde, fremfor at lade en tråd eksekvere koden.
+
+## useful links
+caching in three layer architecture: https://docs.oracle.com/cd/A97335_02/caching.102/a88706/ic_intro.htm
+memory hierarchy: https://www.elprocus.com/memory-hierarchy-in-computer-architecture/
+RAM: https://searchstorage.techtarget.com/definition/RAM-random-access-memory
+Lost update problem: https://www.morpheusdata.com/blog/2015-02-21-lost-update-db
