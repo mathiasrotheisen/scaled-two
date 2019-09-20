@@ -19,7 +19,7 @@ Udvid LongCounter klassen med en 'decrement'-metode, som trækker én fra counte
 2. Hvis du kun låser/synchronizer 'increment'-metoden, hvad forventer du så resultatet bliver? Hvorfor?
 
 //hvis man låser increment fås et negativt tal, fordi decrement altid venter på increment, men increment behøver ikke vente på decrement. 
-![](https://i.imgur.com/qoT3oY3.jpg)
+![](https://i.imgur.com/8sPkYJY.jpg)
 I ovenstående eksempel, låser T1 `i`, læser det og incrementer det til `i = 6`. Mellem T1's `read` og `increment` har T2 læst `i = 5`. Inden T2 kan komme ind og decremente, låser T1 `i` igen, og incrementer `i = 7`. Anden gang T1 slipper låsen, når T2 at decremente, inden T1 låser igen, men T2 har læst `i = 5` og sætter `i = 4`. Det vil sige, at vi har "tabt" to increment kald. 
 
 Skift branch til 'multithread', og ændr antallet af tråde til 10. Koden er lavet således at, hver tråd står for sit eget interval. Eksempelvis når der skal tælles op til 100.000.000 på 10 tråde, så kører første tråd i intervallet 0 - 10.000.000, 2. tråd på 10.000.000 - 20.000.000 osv.
