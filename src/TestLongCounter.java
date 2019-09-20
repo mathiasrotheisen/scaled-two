@@ -17,6 +17,7 @@ class LongCounter {
   }
 
   public void printMyName() {
+    System.out.print("Morten");
     System.out.print("Mathias");
   }
 }
