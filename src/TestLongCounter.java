@@ -4,12 +4,12 @@ public class TestLongCounter {
     final int counts = 10_000_000;
     Thread t1 = new Thread(() -> {
       for (int i=0; i<counts; i++) {
-        lc.increment();
+        lc.decrement();
       }
     });
     Thread t2 = new Thread(() -> {
       for (int i=0; i<counts; i++) {
-        lc.increment();
+        lc.decrement();
       }
     });
     t1.start(); t2.start();
@@ -23,8 +23,8 @@ public class TestLongCounter {
 
 class LongCounter {
   private long count = 0;
-  public void increment() {
-      count = count + 1;
+  public void decrement() {
+      count = count - 1;
   }
 
   public  long get() { 
